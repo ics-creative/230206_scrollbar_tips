@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #424242;
+  background-color: #fff;
+}
+
+h1 {
+  margin-bottom: 32px;
+  line-height: 1.5;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+:root {
+  --color-gray: #424242;
+  --color-red: #a13939;
+  --color-green: #39a15c;
+  --color-blue: #3963a1;
+}
