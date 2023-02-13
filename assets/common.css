@@ -1,3 +1,11 @@
+:root {
+  --color-white: #ffffff;
+  --color-gray: #424242;
+  --color-red: #a13939;
+  --color-green: #39a15c;
+  --color-blue: #3963a1;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -25,8 +33,8 @@ body {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  color: #424242;
-  background-color: #fff;
+  color: var(--color-gray);
+  background-color: var(--color-white);
 }
 
 h1 {
@@ -36,9 +44,9 @@ h1 {
   font-weight: bold;
 }
 
-:root {
-  --color-gray: #424242;
-  --color-red: #a13939;
-  --color-green: #39a15c;
-  --color-blue: #3963a1;
+button {
+  cursor: pointer;
+  border: 0;
+  font-size: 15px;
+  color: var(--color-gray);
 }

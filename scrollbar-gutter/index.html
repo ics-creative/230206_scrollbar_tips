@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>スクロールバーがガタつきを抑えるサンプル</title>
+  <title>スクロールバーの幅分ガタつくサンプル</title>
   <link rel="stylesheet" href="../assets/common.css">
   <style>
+    body {
+      background-color: var(--color-red);
+      color: var(--color-white);
+    }
     body.is-scrollLock {
       overflow: hidden;
     }
@@ -13,77 +17,97 @@
       padding: 16px;
       min-height: 150vh;
     }
-    .opening {
-      position: fixed;
-      height: 100%;
+    .button {
+      display: block;
       width: 100%;
-      background-color: var(--color-red);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      opacity: 1;
-      transition: opacity 1.5s;
-      color: #fff;
-    }
-    .opening.is-leave {
-      opacity: 0;
-    }
-    .opening.is-leaveAfter {
-      display: none;
-      visibility: hidden;
-      opacity: 0;
-    }
-    .opening-title {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
-    .opening-button {
-      text-align: center;
-      cursor: pointer;
-      display: inline-block;
-      margin-bottom: 48px;
-      border-radius: 24px;
-      background-color: #fff;
+      max-width: 200px;
+      padding: 8px;
+      background-color: var(--color-white);
       color: var(--color-red);
-      font-weight: bold;
       border: 0;
-      padding: 8px 24px;
+      border-radius: 32px;
+      font-weight: 700;
     }
     .box {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+    }
+    .box-item {
+      padding: 24px;
+      margin-top: 64px;
+      border-radius: 16px;
+      background-color: #f4e5e5;
+      color: var(--color-gray);
+    }
+    .dialog {
+      width: 100%;
+      max-width: 400px;
+      justify-content: center;
+      grid-template-rows: auto auto;
+      border: 0;
       padding: 24px;
       border-radius: 16px;
-      background-color: #e8e8e8;
+      background-color: var(--color-white);
+      color: var(--color-gray);
+    }
+    .dialog::backdrop {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .dialog-wrapper {
+      display: grid;
+      grid-template-rows: auto auto;
+      row-gap: 24px;
+    }
+    .dialog-closeButton {
+      margin: 0 auto;
+      background-color: var(--color-red);
+      color: var(--color-white);
     }
   </style>
 </head>
-<body class="is-scrollLock">
-  <div class="opening" id="js-opening">
-    <p class="opening-title">オープニング画面</p>
-    <button class="opening-button" id="js-opening-button">オープニングを閉じる</button>
-  </div>
-  <div class="wrapper">
-    <h1>スクロールバーのガタつきを抑える</h1>
-    <div class="box">
+<body>
+<div class="wrapper">
+  <h1>スクロールバーの幅分ガタつくサンプル</h1>
+
+  <button id="js-dialog-open" class="button">モーダルを開く</button>
+
+  <dialog class="dialog" id="js-dialog">
+    <div class="dialog-wrapper">
+      <p class="dialog-text">
+        モーダルのテキストです。確認後、次の閉じるボタンを押してください。
+      </p>
+      <button id="js-dialog-close" class="button dialog-closeButton" value="close">閉じる</button>
+    </div>
+  </dialog>
+
+  <div class="box">
+    <div class="box-item">
       <p>
         けれどもにわかにカムパネルラのお父さんが黒い服を着た人がすぐ出て来てジョバンニに渡しました。って言ったという証拠もいろいろあがるけれども、ええ、河までは二千尺から六千尺あります。そしてまったくその振り子の音のたえまを遠くの遠くのもやのもやのもやのもやのもやの中からでもかおりだしたというふうでした。ジョバンニもそっちを見ていました。その人はもう行ってしまいました。こんなしずかないいとこで僕はどうしてそれを受け取ってかすかにうなずきました。あの人どこへ行ったのだろう。そしてだんだん十字架は窓の正面になり、天の川もまるで遠くへ行ったか一人も見えませんでした。ところがその十字になったのです。聞かなかったのは、次のりんどうの花が咲いていました。僕いま苹果のことを考えながら、さまざまの灯や木の枝で包まれ、電気会社の前のあかりがせわしくのぼったり下ったりしていました。けれどもなぜかまた額に深く皺を刻んで、それに返事するように、スコップを。カムパネルラは、その白い岩の上を通るようになります車掌は紙をジョバンニのとなりにすわらせました。旅人たちは、もうなんとも言えず悲しそうな顔をしてくださいその人は、ひげの中で決心したとおりまっすぐに進んで行こうああきっと行くよ。みんなあの北の十字のときのように露がいっぱいに吹き込みました。さあ、もうじきですから元気を出して美しい頬をかがやかせながらそらを仰ぎました。第一かけるにして向こうの電燈のならんだ車室に、窓から頭を出しているまん中の窓からあの女の子が顔を出しておもしろくうたって行きましょう青年は男の子のぬれたようにまっ黒な上着を着た人がすぐ出て来ました。実験してみると、ここはランカシャイヤだ。林の中や川で、何べんも眼をこすってしまいました。鳥捕りは、こっちに五つの三角標が、うつくしく立っていました。
       </p>
     </div>
-
+    <div class="box-item">
+      <p>
+        けれどもにわかにカムパネルラのお父さんが黒い服を着た人がすぐ出て来てジョバンニに渡しました。って言ったという証拠もいろいろあがるけれども、ええ、河までは二千尺から六千尺あります。そしてまったくその振り子の音のたえまを遠くの遠くのもやのもやのもやのもやのもやの中からでもかおりだしたというふうでした。ジョバンニもそっちを見ていました。その人はもう行ってしまいました。こんなしずかないいとこで僕はどうしてそれを受け取ってかすかにうなずきました。あの人どこへ行ったのだろう。そしてだんだん十字架は窓の正面になり、天の川もまるで遠くへ行ったか一人も見えませんでした。ところがその十字になったのです。聞かなかったのは、次のりんどうの花が咲いていました。僕いま苹果のことを考えながら、さまざまの灯や木の枝で包まれ、電気会社の前のあかりがせわしくのぼったり下ったりしていました。けれどもなぜかまた額に深く皺を刻んで、それに返事するように、スコップを。カムパネルラは、その白い岩の上を通るようになります車掌は紙をジョバンニのとなりにすわらせました。旅人たちは、もうなんとも言えず悲しそうな顔をしてくださいその人は、ひげの中で決心したとおりまっすぐに進んで行こうああきっと行くよ。みんなあの北の十字のときのように露がいっぱいに吹き込みました。さあ、もうじきですから元気を出して美しい頬をかがやかせながらそらを仰ぎました。第一かけるにして向こうの電燈のならんだ車室に、窓から頭を出しているまん中の窓からあの女の子が顔を出しておもしろくうたって行きましょう青年は男の子のぬれたようにまっ黒な上着を着た人がすぐ出て来ました。実験してみると、ここはランカシャイヤだ。林の中や川で、何べんも眼をこすってしまいました。鳥捕りは、こっちに五つの三角標が、うつくしく立っていました。
+      </p>
+    </div>
   </div>
-  <script>
-    const SCROLL_LOCK_CSS_CLASS = "is-scrollLock";
-    const opening = document.querySelector("#js-opening");
-    const button = document.querySelector("#js-opening-button");
-    button.addEventListener("click", () => {
-      opening.classList.add("is-leave");
-      setTimeout(() => {
-        opening.classList.remove("is-leave");
-        opening.classList.add("is-leaveAfter");
-        document.body.classList.remove(SCROLL_LOCK_CSS_CLASS);
-      }, 1500)
-    })
-  </script>
+</div>
+<script>
+  const SCROLL_LOCK_CSS_CLASS = "is-scrollLock";
+  const dialogElement = document.querySelector("#js-dialog");
+  const openButton = document.querySelector("#js-dialog-open");
+  const closeButton = document.querySelector("#js-dialog-close");
+  openButton.addEventListener("click", () => {
+    dialogElement.showModal(); // モーダルを開く
+    document.body.classList.add(SCROLL_LOCK_CSS_CLASS); // bodyを固定する
+  })
+  closeButton.addEventListener("click", () => {
+    dialogElement.close(); // モーダルを閉じる
+    document.body.classList.remove(SCROLL_LOCK_CSS_CLASS); // bodyの固定を戻す
+  })
+</script>
 </body>
 </html>
